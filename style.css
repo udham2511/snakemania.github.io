@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullScreen {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    flex-direction: column;
+    background-color: #578a34;
+}
+
+button {
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Welcome Section */
+
+#welcomeBox {
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    background-color: #00000061;
+}
+
+#welcomeBox div.flexBox img {
+    width: 18rem;
+    border-radius: 8px;
+}
+
+#welcomeBox div.flexBox:nth-child(1) {
+    position: relative;
+}
+
+#welcomeBox div div.flexBox {
+    position: absolute;
+    top: 9rem;
+    width: 85%;
+}
+
+#welcomeBox div div.flexBox div {
+    width: 50%;
+    text-align: center;
+}
+
+.score, .highScore {
+    font: 400 28px sans-serif;
+    color: white;
+}
+
+#welcomeBox button {
+    background-color: #1155cc;
+    color: white;
+    width: 18rem;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#welcomeBox button:hover {
+    background-color: #094fc7;
+}
+
+/* Score Section */
+
+#gameBox {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+}
+
+#scoreBox {
+    background-color: #4a752c;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#scoreBox img {
+    height: 2.3rem;
+}
+
+.scoreBoxBox {
+    margin: 11px;
+}
+
+.scoreBoxBox:nth-child(1) img {
+    margin: 0px 9px;
+}
+
+.scoreBoxBox:nth-child(1) div.flexBox {
+    margin: 0px 15px;
+}
+
+.scoreBoxBox:nth-child(2) img {
+    margin: 0px 4px;
+    cursor: pointer;
+}
+
+/* Game Section */
+
+canvas {
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Score Section */
+
+    #scoreBox img {
+        height: 1.6rem;
+    }
+
+    .scoreBoxBox:nth-child(1) div.flexBox {
+        margin: 0px 5px;
+    }
+
+    .score, .highScore {
+        font-size: 22px;
+    }
+
+    /* Game Section */
+
+    canvas {
+        margin-top: 1.2rem;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Mania</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body class="fullScreen">
+    <div id="welcomeBox" class="flexBox fullScreen">
+        <div class="flexBox">
+            <img src="images/welcome.png">
+
+            <div class="flexBox">
+                <div class="score">0</div>
+                <div class="highScore">0</div>
+            </div>
+        </div>
+
+        <button onclick="playGame()" class="flexBox">
+            <img src="images/play_arrow.png">
+            <h2>Play</h2>
+        </button>
+    </div>
+
+    <div class="flexBox" id="gameBox">
+        <div id="scoreBox" class="flexBox">
+            <div class="flexBox scoreBoxBox">
+                <div class="flexBox">
+                    <img src="images/apple.png">
+                    <div class="score">0</div>
+                </div>
+                <div class="flexBox">
+                    <img src="images/trophy.png">
+                    <div class="highScore">0</div>
+                </div>
+            </div>
+
+            <div class="flexBox scoreBoxBox">
+                <img src="images/volume_up.png" onclick="handleAudio(this)">
+                <img src="images/close_button.png" onclick="quitGame()">
+            </div>
+        </div>
+
+        <canvas></canvas>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
